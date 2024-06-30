@@ -1139,6 +1139,10 @@ function dino(){
 		}
 	ctx.font="30px Arial";
 	ctx.fillText("Score: "+score,10,30);
+	if(speedgap==5){
+		xspeed=xspeed-0.1
+		speedgap=0
+	}
 }
 function dinostop(){
 	ctx.fillStyle="white"
@@ -1172,6 +1176,7 @@ function dinostop(){
 		score=0
 		cactus1x=500
 		cactus2x=800
+		cactusspeed=2
 		game="dino"
 		}
 }
