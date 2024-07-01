@@ -255,6 +255,7 @@ if(mouseX>225
 &&pausetimer==0){
 	pausetimer = 10
 	pause=0
+	score=0
 	game=0
 	// console.log("menu")
 }
