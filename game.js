@@ -1144,7 +1144,7 @@ function dino(){
 	ctx.font="30px Arial";
 	ctx.fillText("Score: "+score,10,30);
 	if(speedgap==5){
-		cactusspeed=cactusspeed+0.1
+		cactusspeed=cactusspeed+0.2
 		speedgap=0
 	}
 }
