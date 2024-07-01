@@ -83,10 +83,10 @@ floorImage.src = "floor.jpg"
 var ammo = 0
 // shop
 var shopImage = new Image()
-shopImage.src = "shop.PNG"
+shopImage.src = "shop.png"
 // welcome mat
 var welcomeImage = new Image()
-welcomeImage.src = "welcome.PNG"
+welcomeImage.src = "welcome.png"
 // mouse
 var mouseX = 0
 var mouseY = 0
@@ -96,7 +96,7 @@ var keyDown = 1
 var click = 0
 // scope
 var scopeImage = new Image()
-scopeImage.src = "scope.PNG"
+scopeImage.src = "scope.png"
 //background
 var backgroundImage = new Image()
 backgroundImage.src = "background.png"
