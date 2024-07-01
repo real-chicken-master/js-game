@@ -256,6 +256,7 @@ if(mouseX>225
 	pausetimer = 10
 	pause=0
 	score=0
+	speedgap=0
 	game=0
 	// console.log("menu")
 }
