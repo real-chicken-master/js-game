@@ -1116,11 +1116,15 @@ function dino(){
 	//reset cactus1
 	if(cactus1x<0-cactus1w){
 	cactus1x=WIDTH
-	score++}
+	score++
+	cactusspeed++
+	}
 	//reset cactus2
 	if(cactus2x<0-cactus2w){
 	cactus2x=WIDTH
-	score++}
+	score++
+	cactusspeed++
+	}
 	//Collisions
 	//1st cactus
 	if(cactus1x<dinox+dinoh
@@ -1140,7 +1144,7 @@ function dino(){
 	ctx.font="30px Arial";
 	ctx.fillText("Score: "+score,10,30);
 	if(speedgap==5){
-		xspeed=xspeed-0.1
+		cactusspeed=cactusspeed+0.1
 		speedgap=0
 	}
 }
