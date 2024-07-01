@@ -730,7 +730,7 @@ function buycheck(){
 		money = money-5
 		ammo=ammo+5
 		if(upgrades == 1){
-		console.log(" ")
+		//console.log(" ")
 		upgrades = 2	
 		}
 	}
