@@ -112,8 +112,6 @@ class Zombie{
 		this.zomy = Math.random()* (HEIGHT-100)
 	}
 	movezombie(){
-		// Move the rain - Change it's position
-		// When rain it's the bottom, restart at the top
 		this.zomx = Math.random() *(WIDTH-100)
 		this.zomy = Math.random() *(HEIGHT-100)
 	}
@@ -134,6 +132,7 @@ mouseY = mouseEvent.offsetY;
 }
 window.onload=setInterval(startCanvas,10)
 function startCanvas(){
+	// console.log(pause)
 	if (pausetimer>0){
 		pausetimer = pausetimer-1
 		
@@ -221,20 +220,20 @@ if(pause==0){
 	){
 		pausetimer = 10
 		pause=1
-		console.log("pause")
+		// console.log("pause")
 	}
 	}
 //continue
 }else if(pause==1){
 gamepause()
-	
-	
-
 }
 function gamepause(){
-		ctx.font="20px arial"
+	ctx.font="20px arial"
 	ctx.fillStyle="black"
-ctx.fillText("game paused",200,100)}
+	ctx.fillText("game paused",200,100)
+	ctx.fillRect(225,280,100,30)
+	ctx.fillStyle="white"
+	ctx.fillText("menu",250,300)
 if(mouseX>565&&
 	mouseX<590&&
 	mouseY>0&&
@@ -245,8 +244,20 @@ if(mouseX>565&&
 	){
 		pausetimer = 10
 		pause=0
-		console.log("unpause")
+		// console.log("unpause")
 	}
+}
+if(mouseX>225
+&&mouseX<325
+&&mouseY>280
+&&mouseY<310
+&&click==1
+&&pausetimer==0){
+	pausetimer = 10
+	pause=0
+	game=0
+	// console.log("menu")
+}
 }
 //zombie shootout
 function startcheck(){
