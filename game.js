@@ -132,7 +132,7 @@ mouseY = mouseEvent.offsetY;
 }
 window.onload=setInterval(startCanvas,10)
 function startCanvas(){
-	// console.log(pause)
+	// console.log(game)
 	if (pausetimer>0){
 		pausetimer = pausetimer-1
 		
@@ -246,7 +246,6 @@ if(mouseX>565&&
 		pause=0
 		// console.log("unpause")
 	}
-}
 if(mouseX>225
 &&mouseX<325
 &&mouseY>280
@@ -259,6 +258,7 @@ if(mouseX>225
 	speedgap=0
 	game=0
 	// console.log("menu")
+}
 }
 }
 //zombie shootout
@@ -1130,24 +1130,24 @@ function dino(){
 	if(cactus1x<0-cactus1w){
 	cactus1x=WIDTH
 	score++
-	cactusspeed++
+	speedgap++
 	}
 	//reset cactus2
 	if(cactus2x<0-cactus2w){
 	cactus2x=WIDTH
 	score++
-	cactusspeed++
+	speedgap++
 	}
 	//Collisions
 	//1st cactus
-	if(cactus1x<dinox+dinoh
+	if(cactus1x<dinox+dinoh-11
 	&&cactus1x+cactus1w>dinox+11
 	&&cactus1y<dinoy+dinoh
 	){
 		game="dinostop"
 		console.log(game)
 	}
-	if(cactus2x<dinox+dinoh
+	if(cactus2x<dinox+dinoh-11
 	&&cactus2x+cactus2w>dinox+11
 	&&cactus2y<dinoy+dinoh
 	){
@@ -1157,6 +1157,7 @@ function dino(){
 	ctx.font="30px Arial";
 	ctx.fillText("Score: "+score,10,30);
 	if(speedgap==5){
+		console.log("cactus")
 		cactusspeed=cactusspeed+0.2
 		speedgap=0
 	}
